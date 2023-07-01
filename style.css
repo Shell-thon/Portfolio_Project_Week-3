@@ -22,25 +22,48 @@ body
   align-items: center;
   z-index: 100;
 }
-.logo
-{
+.logo {
   position: relative;
   font-size: 25px;
-  color: #fff;
+  color: wheat;
   text-decoration: none;
   font-weight: 600;
 }
-.navbar a
-{
+.navbar a {
   display: inline-block;
   font-size: 25px;
-  color: #fff;
+  color: wheat;
   text-decoration: none;
-  font-weight: 500px;
+  font-weight: 100;
   margin-left: 35px;
   transition: .3s;
 }
-.navbar a:hover
-{
-  color: #0ef;
+.navbar a:hover {
+  color: rgb(43, 32, 11);
+}
+.home {
+  position: relative;
+  width: 100%;
+  justify-content: space-between;
+  height: 100vh;
+  background-image: url('./img/Maze.gif');
+  background-color: rgba(0, 25, 37, 0.943);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 70px 10% 0;
+}
+.home-content {
+  font-size: 32px;
+  font-weight: 700px;
+}
+.home-content h1 {
+  font-size: 56px;
+  font-weight: 700;
+  margin: -3px 0;
+
+}
+.home-content p {
+  font-size: 20px;
 }
