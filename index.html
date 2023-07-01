@@ -1,38 +1,68 @@
-<!DOCTYPE html>
 <html>
   <head>
-    <link href="style.css" rel="stylesheet" type="text/css">
-    <title>Maze Project</title>
+    <style type="text/css">
+
+      #container {
+        position: relative;
+        width: 450px;
+        height: 450px;
+        overflow: hidden;
+        margin: 0 auto;
+      }
+      
+      #container img {
+        position: absolute;
+        left: 0;
+        -webkit-transition: opacity 1s ease-in-out;
+        -moz-transition: opacity 1s ease-in-out;
+        -o-transition: opacity 1s ease-in-out;
+        -ms-transition: opacity 1s ease-in-out;
+        transition: opacity 1s ease-in-out;
+      }
+    </style>
   </head>
   <body>
-  	<div class="split-slideshow">
-  	  <div class="slideshow">
-  	    <div class="slider">
-  	  	  <div class="item">
-            <img src="./img/Maze.gif" />
-  	  	  </div>
-  	  	  <div class="item">
-            <img src="./img/surroundings.png" />
-  	  	  </div>
-  	  	  <div class="item">
-            <img src="./img/Floor.png" />
-  	  	  </div>
-  	  	  <div class="item">
-            <img src="./img/Weapon.gif" />
-  	  	  </div>
-  	    </div>
-  	  </div>
-  	  <div class="slideshow-text">
-  	    <div class="item">Maze</div>
-  	    <div class="item">Surroundings</div>
-  	    <div class="item">Floor</div>
-  	    <div class="item">Weapon</div>
-  	  </div>
-  	</div>
-
-    <a class="The-Maze" target="_blank" href="https://github.com/Shell-thon/The-Maze">
-      <img src="./img/Maze2.png">
-    </a>
-    <script src="main.js"></script>
+    <div id="container">
+      <img src="Weapon.gif" style="opacity:1;">
+      <img src="Maze.gif" style="opacity:0;">
+      <img src="Floor.png" style="opacity:0;">
+      <img src="surroundings.png" style="opacity:0;">
+    </div>
+    
+    <script type="text/javascript"> 
+    var images = [],
+        current = 0;
+    
+    // get images
+    images[0] = document.getElementsByTagName('img')[0];
+    images[1] = document.getElementsByTagName('img')[1];
+    images[2] = document.getElementsByTagName('img')[2];
+    images[3] = document.getElementsByTagName('img')[3];
+    
+    // Changing the opacity of an image 
+    function changeOpacity(opacity, idx) {
+        images[idx].style.opacity = opacity / 100;
+    }
+    
+    function switchImage() {
+        current++;
+        // reset back to 0
+        if (current === 4) {
+            current = 0;
+        }
+        // change the opacity to 0 of the current item
+        changeOpacity(0, current - 1);
+        // change the opacity to 1 of the next item
+        changeOpacity(1, current);
+    
+        // Do the switch
+        setTimeout(switchImage, 1000);
+    }
+    
+    switchImage();
+    
+    </script>
+    
+    
   </body>
 </html>
