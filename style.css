@@ -67,3 +67,9 @@ body
 .home-content p {
   font-size: 20px;
 }
+.circle-outer {
+  border-radius: 50%;
+}
+.circle-inner {
+  border-radius: 50%;
+}
