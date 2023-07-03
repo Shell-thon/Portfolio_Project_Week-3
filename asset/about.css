@@ -70,3 +70,8 @@ body
 .about-content p {
   font-size: 20px;
 }
+.youtube {
+  position: relative;
+  top: 35px;
+  right: 55px;
+}
