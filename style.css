@@ -51,7 +51,7 @@ body
   width: 100%;
   justify-content: space-between;
   height: 100vh;
-  background-image: url('../img/Maze.gif');
+  background-image: url('../asset/img/Maze.gif');
   background-color: rgba(0, 25, 37, 0.943);
   background-size: cover;
   background-position: center;
