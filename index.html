@@ -1,39 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Maze</title>
+  <link rel="stylesheet" href="./node_modules/boxicons/css/boxicons.min.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  
+
   <header class="header">
     <a href="#" class="logo">The-Maze</a>
 
     <nav class="navbar">
-      <a href="Home">Home</a>
-      <a href="About">About</a>
-      <a href="Feature">Feature</a>
-      <a href="Contact">Contact</a>
+      <a class='bx-tada-hover' href="./index.html">Home</a>
+      <a class='bx-tada-hover' href="./about.html">About</a>
+      <a class='bx-tada-hover' href="#">Feature</a>
+      <a class='bx-tada-hover' href="./contact.html">Contact</a>
     </nav>
   </header>
   <section class="home">
     <div class="home-content">
-      <h3>The Maze is an exciting and innovative 3D game built using raycasting technology</h3>
-      <h3></h3>
-      <p>Players are faced with the challenge of navigating through a complex maze, 
-        finding their way to the designated endpoint.
-        The Maze provides an enjoyable and accessible gaming experience for all ages.
+      <h3>The Maze is an exciting and <span class="text"></span></h3>
+      <p>
+        <br>Click the rocket to see the game repo!!
+        <a href="https://github.com/Shell-thon/The-Maze">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCA
+          YAAACpSkzOAAAAAXNSR0IArs4c6QAAAYtJREFUSEu9lV1SwjAUhe/JRixsRNhBdQPK
+          mzLuAdyDU30DNmC7A+pGaFaS6ySSTmmTJg0OPNEmud85uT8F3eiHG3HoKtBbni200I9
+          K1iHBF6B1nj3rA4JIhg5riAKOTFR/ls1yGuhxviXmzfmQJOBQfJ+2/SAWYt8L5mVI2IW
+          jfgATCHjvwmL2uNxdgF7yLBNA09koBfPKqnVCiCjm+gbF8PowO4JIJzkKokUlgYwrEht
+          B6hByYp0ngUKJ91SXVMzLr0pKX/WN9pEvJykwL2gixLK9zpygRMgobAC6EuKFhRs2NFs8
+          6/1KbEGpTnRAAD+k6I7AZla6RlML0v0DYHdu1igffdXrfL7rwrrrgxz9TXBxz+DM0kCk/7
+          fPrQrmVVHJvX123IosymZmRmaM9PMMPA5gjH1RnVY2hhEJ7Loxi7IxjCiQ3uiBmU+JUKpW2n
+          EPos8p5pmeGNGgEdjopSSBUmCTr64r25szh7erQK0zogUDT56WkMSobbFMytFYMrRLu+76XP
+          wbKNQmvw2Q7RvroJ7YAAAAAElFTkSuQmCC"/>
+        </a>
       </p>
-      <div style="border-radius: 50%;">
-        <div style="border-radius: 50%;">
-          <a href="https://github.com/Shell-thon/The-Maze" class="bx bxs-rocket-launch"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAAAXNSR0IArs4c6QAABDpJREFUeF7t3F1S2zAQAOCV6T0aTpJwCShPJEzvAdyjk+SNlkvgnKTpPYrUkR23wbWjXa0kr4L8koH4B3/ZlVaygoKysQQU6+hyMBRAZhAUwALIFGAeXiKwADIFmIeXCCyA/wu83C+WBmBmwHzu3q0MzI731Ar29mcF6pd91RXU8Lv93e22bl4xW/YR+LxczFRlHloMWAC8h8Ig9PdRBmr7uzejVi7MbAFtlIExd0Y1aFE2Xamr2291gzm2ZQf4437xCGDuQkSaS12BWl2v6+1ZANpUvVBmEzPi+lAGYPtlvVtlD/j8dbGotHl1RUzo921beL3ZXWUNeEjZppOYYrtZ7042c6LbwO/3840CWE4B111Ta3V5qicWCygBzyJmCSgFrwF0lDLiIlASXnaA0vCyApSI1w4PTxfTIlI4AN5egXpqxq8aavgEswsNMw1mzu3FxQNy8VyjhUMRvvEd+onuRGLjdbWcHQZWVTOSeTelhakvxQJy8QBgf7PeXWIQ7D6+IxqRgAHwbPP+dLOuH7GALeL8JzUKxRXSYfDcBe4QrA9g9LFwM7FpK3Ywc/vaTZ0bBTNl2ilyO31up87tFDu3V+xgXDc2BOjx4TmbCa8yJsVssCs1Xak1dPzLav5KmU8MPp3l8Qm6HLzfd9VnIylsaBd0t7OoCPTtwWh/LG1vV/3XP9uhlLGdCHpz9cDtSMWxUcPedb6Q71Oi0OM+nO3fSUBO8RkSyXGuvdbqyvXo0a/pcaevMwIlpu4wqHrSGrZ9SDuMu3gzD5SOozs/Jn2dgG3x2TxGnOyZBCWaba9plNodyiXOQ3ZU+qIAc0OkgI/vi0tfNOAHQ0RHHwnwoyBi274uep1lTD/Mc2oT6emMT11vwHONRGphzgI8N0TMmHcsmskpfHyic0hnDh65Exn6FHJG5OIFAcw1nUPgBQPMDTEUXlDAXBBD4gUHlI4YGi8KoFTEGHjRAKUhxsKLCigFMSZedMCpEWPjJQGcCjEFXjLA1Iip8JICpkT0eehOn/pqj2BNJvz7Agx+Hi3F2DkLwPYrpcYuXDxschApz4t9I+/vXfucYPwpvwxE8YCnl4lNjygaENeGTYsoHBC7ynM6RLGA9BVO0yCKBcSlb79bSo9Ifbbr05F69cI+a4wP5SZ6Qbjfh/SewGf5ry8iupCmp+9kkUhamuELR45A5tfu97pSK9d/wDi+GUYkygT0vSHOwN7vmvg2lxt9pLGwz82EaMyp1w1xTQosug2krDEOXUYQEJOmLykCcYDx0geHGO/6Y1GJjsChEsauaKpA7ex3dF0LvSlpMbavAzF59JEi0P7xCtqvbqUCG4IcR0wffSTAEBEU6hx9RE5Pz/2b0CnMvVDo448QJ0ldciEdGiDE+Syi/ceJlAI9xHWPz5FtBIaG8D1fAfSVOxxXAAsgU4B5eInAAsgUYB7+B0YCkG8W/d0/AAAAAElFTkSuQmCC"/></a>
-        </div>
+      <div class="home-sci">
+        <a href="#"><i class="bx bxl-facebook"></i></a>
+        <a href="#"><i class="bx bxl-instagram"></i></a>
+        <a href="#"><i class="bx bxl-whatsapp"></i></a>
+        <a href="#"><i class="bx bxl-tiktok"></i></a>
       </div>
+      <a href="./contact.html" class="btn-box">Contact Me</a>
     </div>
   </section>
+  <script src="./node_modules/boxicons/dist/boxicons.js"></script>
+  <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
